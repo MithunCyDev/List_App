@@ -5,6 +5,9 @@ import { firestore, } from '../firebase.config';
 export const saveMember = async (data)=>{
     await setDoc(doc(firestore, "member_list", `${Date.now()}`), data, {marge: true,});
 };
+export const saveNewMember = async (data)=>{
+    await setDoc(doc(firestore, "member_list", `${Date.now()}`), data, {marge: true,});
+};
 // //saving new Item
 // export const saveItem = async (data)=>{
 //     await setDoc(doc(firestore, "foodItems", `${Date.now()}`), data, {
